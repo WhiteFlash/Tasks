@@ -1,0 +1,13 @@
+D:\All-files\Work\Тестовые задания\Softline\Server\Tasks\Tasks.DAL\obj\Debug\netcoreapp3.1\Tasks.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\All-files\Work\Тестовые задания\Softline\Server\Tasks\Tasks.DAL\obj\Debug\netcoreapp3.1\Tasks.DAL.AssemblyInfoInputs.cache
+D:\All-files\Work\Тестовые задания\Softline\Server\Tasks\Tasks.DAL\obj\Debug\netcoreapp3.1\Tasks.DAL.AssemblyInfo.cs
+D:\All-files\Work\Тестовые задания\Softline\Server\Tasks\Tasks.DAL\obj\Debug\netcoreapp3.1\Tasks.DAL.csproj.CoreCompileInputs.cache
+D:\All-files\Work\Тестовые задания\Softline\Server\Tasks\Tasks.DAL\bin\Debug\netcoreapp3.1\Tasks.DAL.deps.json
+D:\All-files\Work\Тестовые задания\Softline\Server\Tasks\Tasks.DAL\bin\Debug\netcoreapp3.1\Tasks.DAL.dll
+D:\All-files\Work\Тестовые задания\Softline\Server\Tasks\Tasks.DAL\bin\Debug\netcoreapp3.1\Tasks.DAL.pdb
+D:\All-files\Work\Тестовые задания\Softline\Server\Tasks\Tasks.DAL\bin\Debug\netcoreapp3.1\Tasks.Core.dll
+D:\All-files\Work\Тестовые задания\Softline\Server\Tasks\Tasks.DAL\bin\Debug\netcoreapp3.1\Tasks.Core.pdb
+D:\All-files\Work\Тестовые задания\Softline\Server\Tasks\Tasks.DAL\obj\Debug\netcoreapp3.1\Tasks.DAL.dll
+D:\All-files\Work\Тестовые задания\Softline\Server\Tasks\Tasks.DAL\obj\Debug\netcoreapp3.1\Tasks.DAL.pdb
+D:\All-files\Work\Тестовые задания\Softline\Server\Tasks\Tasks.DAL\obj\Debug\netcoreapp3.1\Tasks.DAL.csproj.AssemblyReference.cache
+D:\All-files\Work\Тестовые задания\Softline\Server\Tasks\Tasks.DAL\obj\Debug\netcoreapp3.1\Tasks.DAL.csproj.CopyComplete
