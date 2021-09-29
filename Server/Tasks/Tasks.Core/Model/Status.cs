@@ -1,15 +1,16 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
 using System.Runtime.Serialization;
-using System.Text;
+using Tasks.Core.Interfaces;
 
 namespace Tasks.Core.Model
 {
-
+    /// <summary>
+    /// Словарь. Таблица Статус.
+    /// Значения Id - внешние ключи таблицы Задачи.
+    /// </summary>
     [DataContract]
-    public class Status : Services.IStatus
+    public class Status : IStatus
     {
         [DataMember]
         public int StatusID { get; set; }

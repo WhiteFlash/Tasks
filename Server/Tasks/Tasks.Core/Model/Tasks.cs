@@ -1,19 +1,16 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System.Runtime.Serialization;
-using System;
-using System.ComponentModel.DataAnnotations;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
+using Tasks.Core.Interfaces;
 
 namespace Tasks.Core.Model
 {
     /// <summary>
     /// Класс представляет таблицу "Задачи" в базе данных.
     /// </summary>
-    
+
     [DataContract]
-    public class Tasks : Services.ITasks
+    public class Tasks : ITasks
     {
         [DataMember]
         public int TasksID { get; set; }
