@@ -6,7 +6,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Tasks.DAL.Data;
-using Tasks.Core.Model;
+using Newtonsoft;
+using CustomTask = Tasks.Core.Model.Tasks;
 
 
 namespace Tasks.API.Controllers
@@ -34,7 +35,7 @@ namespace Tasks.API.Controllers
 
         [Produces("application/json")]
         [HttpPut("{id}")]
-        public async Task<JsonResult> PutTasks(int id, Tasks.Core.Model.Tasks tasks)
+        public async Task<JsonResult> PutTasks(int id, CustomTask tasks)
         {
             JsonResult json = new JsonResult(tasks);
             if (id != tasks.TasksID)
@@ -51,7 +52,7 @@ namespace Tasks.API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<Tasks.Core.Model.Tasks>> PostTasks([FromBody] Tasks.Core.Model.Tasks tasks)
+        public async Task<ActionResult<CustomTask>> PostTasks([FromBody] CustomTask tasks)
         {
             try
             {
@@ -65,9 +66,9 @@ namespace Tasks.API.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteTasks([FromBody] int id)
+        public async Task<ActionResult> DeleteTasks([FromBody] int id)
         {
-            var tasks = await _context.Tasks.FirstOrDefaultAsync(element => element.TasksID == id);
+            CustomTask tasks = await _context.Tasks.FirstOrDefaultAsync(element => element.TasksID == id);
             if (tasks == null)
             {
                 return NotFound();
