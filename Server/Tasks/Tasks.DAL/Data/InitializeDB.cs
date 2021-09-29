@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Tasks.Core.Model;
+using CustomTask = Tasks.Core.Model.Tasks;
 
 namespace Tasks.DAL.Data
 {
@@ -7,7 +8,7 @@ namespace Tasks.DAL.Data
     {
         public static  void Initialize(DataContext context)
         {
-            List<Core.Model.Status> listOfStatuses = new List<Tasks.Core.Model.Status>()
+            List<Status> listOfStatuses = new List<Status>()
             {
                 new Status()
                 {
@@ -22,27 +23,27 @@ namespace Tasks.DAL.Data
                     StatusTypes = "Завершена"
                 },
             };
-            List<Core.Model.Tasks> listOfTasks = new List< Core.Model.Tasks>()
+            List<CustomTask> listOfTasks = new List<CustomTask>()
             {
-                new  Core.Model.Tasks()
+                new CustomTask()
                 {
                     TasksName = "Помыть машину",
                     Description = "Открыть гараж, помыть машину, вытереть машину",
                     Status = listOfStatuses[0]
                 },
-                new  Core.Model.Tasks()
+                new  CustomTask()
                 {
                     TasksName = "Выкинуть мусор",
                     Description = "Открыть гараж, выкинуть мусор",
                     Status = listOfStatuses[1]
                 },
-                new  Core.Model.Tasks()
+                new  CustomTask()
                 {
                     TasksName = "Протереть пыль",
                     Description = "Взять тряпку, протереть пыль. Всё.",
                     Status = listOfStatuses[2]
                 },
-                new  Core.Model.Tasks()
+                new  CustomTask()
                 {
                     TasksName = "Пропылесосить пыль",
                     Description = "Взять тряпку, пропылесосить пыль.",

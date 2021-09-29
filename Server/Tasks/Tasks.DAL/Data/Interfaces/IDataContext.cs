@@ -1,13 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using Tasks.Core.Model;
+using CustomTask = Tasks.Core.Model.Tasks;
 
 namespace Tasks.DAL.Data.Interfaces
 {
     public interface IDataContext
     {
-        DbSet<Core.Model.Tasks> Tasks { get; set; }
-        DbSet<Core.Model.Status> Statuses { get; set; }
+        DbSet<CustomTask> Tasks { get; set; }
+        DbSet<Status> Statuses { get; set; }
     }
 }
