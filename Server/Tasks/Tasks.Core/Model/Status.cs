@@ -13,18 +13,20 @@ namespace Tasks.Core.Model
     public class Status : IStatus
     {
         [DataMember]
-        public int StatusID { get; set; }
+        public int Id { get; set; }
         
         [DataMember]
-        public string StatusTypes { get; set; }
+        public string Title { get; set; }
 
         public class Config : IEntityTypeConfiguration<Status>
         {
             public void Configure(EntityTypeBuilder<Status> config)
             {
                 config.ToTable("Status");
-                config.HasKey(key => key.StatusID);
-                config.Property(prop => prop.StatusTypes).HasColumnName("StatusType");
+                config.HasKey(key => key.Id);
+                config.Property(prop => prop.Title).HasColumnName("Title");
+
+                config.Property(prop => prop.Title).IsRequired();
             }
         }
     }

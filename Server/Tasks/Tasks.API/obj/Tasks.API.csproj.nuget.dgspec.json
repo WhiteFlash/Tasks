@@ -1,38 +1,38 @@
 {
   "format": 1,
   "restore": {
-    "D:\\All-files\\Work\\Тестовые задания\\Softline\\Server\\Tasks\\Tasks.API\\Tasks.API.csproj": {}
+    "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.API\\Tasks.API.csproj": {}
   },
   "projects": {
-    "D:\\All-files\\Work\\Тестовые задания\\Softline\\Server\\Tasks\\Tasks.API\\Tasks.API.csproj": {
+    "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.API\\Tasks.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\All-files\\Work\\Тестовые задания\\Softline\\Server\\Tasks\\Tasks.API\\Tasks.API.csproj",
+        "projectUniqueName": "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.API\\Tasks.API.csproj",
         "projectName": "Tasks.API",
-        "projectPath": "D:\\All-files\\Work\\Тестовые задания\\Softline\\Server\\Tasks\\Tasks.API\\Tasks.API.csproj",
+        "projectPath": "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.API\\Tasks.API.csproj",
         "packagesPath": "C:\\Users\\ivank\\.nuget\\packages\\",
-        "outputPath": "D:\\All-files\\Work\\Тестовые задания\\Softline\\Server\\Tasks\\Tasks.API\\obj\\",
+        "outputPath": "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ivank\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\All-files\\Work\\Тестовые задания\\Softline\\Server\\Tasks\\Tasks.Core\\Tasks.Core.csproj": {
-                "projectPath": "D:\\All-files\\Work\\Тестовые задания\\Softline\\Server\\Tasks\\Tasks.Core\\Tasks.Core.csproj"
+              "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.Core\\Tasks.Core.csproj": {
+                "projectPath": "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.Core\\Tasks.Core.csproj"
               },
-              "D:\\All-files\\Work\\Тестовые задания\\Softline\\Server\\Tasks\\Tasks.DAL\\Tasks.DAL.csproj": {
-                "projectPath": "D:\\All-files\\Work\\Тестовые задания\\Softline\\Server\\Tasks\\Tasks.DAL\\Tasks.DAL.csproj"
+              "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.DAL\\Tasks.DAL.csproj": {
+                "projectPath": "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.DAL\\Tasks.DAL.csproj"
               }
             }
           }
@@ -44,13 +44,9 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net5.0": {
+          "targetAlias": "net5.0",
           "dependencies": {
-            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
-              "target": "Package",
-              "version": "[3.1.2, )"
-            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.2, )"
@@ -76,6 +72,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.5, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
             }
           },
           "imports": [
@@ -91,7 +91,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.17, 3.1.17]"
+              "version": "[5.0.8, 5.0.8]"
             }
           ],
           "frameworkReferences": {
@@ -106,14 +106,14 @@
         }
       }
     },
-    "D:\\All-files\\Work\\Тестовые задания\\Softline\\Server\\Tasks\\Tasks.Core\\Tasks.Core.csproj": {
+    "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.Core\\Tasks.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\All-files\\Work\\Тестовые задания\\Softline\\Server\\Tasks\\Tasks.Core\\Tasks.Core.csproj",
+        "projectUniqueName": "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.Core\\Tasks.Core.csproj",
         "projectName": "Tasks.Core",
-        "projectPath": "D:\\All-files\\Work\\Тестовые задания\\Softline\\Server\\Tasks\\Tasks.Core\\Tasks.Core.csproj",
+        "projectPath": "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.Core\\Tasks.Core.csproj",
         "packagesPath": "C:\\Users\\ivank\\.nuget\\packages\\",
-        "outputPath": "D:\\All-files\\Work\\Тестовые задания\\Softline\\Server\\Tasks\\Tasks.Core\\obj\\",
+        "outputPath": "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ivank\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -170,14 +170,14 @@
         }
       }
     },
-    "D:\\All-files\\Work\\Тестовые задания\\Softline\\Server\\Tasks\\Tasks.DAL\\Tasks.DAL.csproj": {
+    "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.DAL\\Tasks.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\All-files\\Work\\Тестовые задания\\Softline\\Server\\Tasks\\Tasks.DAL\\Tasks.DAL.csproj",
+        "projectUniqueName": "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.DAL\\Tasks.DAL.csproj",
         "projectName": "Tasks.DAL",
-        "projectPath": "D:\\All-files\\Work\\Тестовые задания\\Softline\\Server\\Tasks\\Tasks.DAL\\Tasks.DAL.csproj",
+        "projectPath": "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.DAL\\Tasks.DAL.csproj",
         "packagesPath": "C:\\Users\\ivank\\.nuget\\packages\\",
-        "outputPath": "D:\\All-files\\Work\\Тестовые задания\\Softline\\Server\\Tasks\\Tasks.DAL\\obj\\",
+        "outputPath": "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ivank\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -194,8 +194,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\All-files\\Work\\Тестовые задания\\Softline\\Server\\Tasks\\Tasks.Core\\Tasks.Core.csproj": {
-                "projectPath": "D:\\All-files\\Work\\Тестовые задания\\Softline\\Server\\Tasks\\Tasks.Core\\Tasks.Core.csproj"
+              "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.Core\\Tasks.Core.csproj": {
+                "projectPath": "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.Core\\Tasks.Core.csproj"
               }
             }
           }

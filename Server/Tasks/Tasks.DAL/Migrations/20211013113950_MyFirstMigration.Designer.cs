@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Tasks.DAL.Data;
 
-namespace Tasks.API.Migrations
+namespace Tasks.DAL.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20210823132252_Second")]
-    partial class Second
+    [Migration("20211013113950_MyFirstMigration")]
+    partial class MyFirstMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -17,24 +17,9 @@ namespace Tasks.API.Migrations
             modelBuilder
                 .HasAnnotation("ProductVersion", "3.1.2");
 
-            modelBuilder.Entity("Tasks.API.Model.Status", b =>
+            modelBuilder.Entity("Tasks.Core.Model.Note", b =>
                 {
-                    b.Property<int>("StatusID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("StatusTypes")
-                        .HasColumnName("StatusType")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("StatusID");
-
-                    b.ToTable("Status");
-                });
-
-            modelBuilder.Entity("Tasks.API.Model.Tasks", b =>
-                {
-                    b.Property<int>("TasksID")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -45,20 +30,35 @@ namespace Tasks.API.Migrations
                     b.Property<int>("StatusId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("TasksName")
-                        .HasColumnName("TasksName")
+                    b.Property<string>("Title")
+                        .HasColumnName("Title")
                         .HasColumnType("TEXT");
 
-                    b.HasKey("TasksID");
+                    b.HasKey("Id");
 
                     b.HasIndex("StatusId");
 
-                    b.ToTable("Tasks");
+                    b.ToTable("Notes");
                 });
 
-            modelBuilder.Entity("Tasks.API.Model.Tasks", b =>
+            modelBuilder.Entity("Tasks.Core.Model.Status", b =>
                 {
-                    b.HasOne("Tasks.API.Model.Status", "Status")
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Title")
+                        .HasColumnName("Title")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Status");
+                });
+
+            modelBuilder.Entity("Tasks.Core.Model.Note", b =>
+                {
+                    b.HasOne("Tasks.Core.Model.Status", "Status")
                         .WithMany()
                         .HasForeignKey("StatusId")
                         .OnDelete(DeleteBehavior.Cascade)

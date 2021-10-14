@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Tasks.Core.Interfaces
 {
-    interface ITasks
+    interface INote
     {
-        public string TasksName { get; set; }
+        public string Title { get; set; }
     }
 }

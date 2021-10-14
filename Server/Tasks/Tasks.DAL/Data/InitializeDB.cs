@@ -1,61 +1,60 @@
 ﻿using System.Collections.Generic;
 using Tasks.Core.Model;
-using CustomTask = Tasks.Core.Model.Tasks;
 
 namespace Tasks.DAL.Data
 {
     public static class InitializeDB
     {
-        public static  void Initialize(DataContext context)
+        public static void Initialize(DataContext context)
         {
             List<Status> listOfStatuses = new List<Status>()
             {
                 new Status()
                 {
-                    StatusTypes = "Создана"
+                    Title = "Создана"
                 },
                 new Status()
                 {
-                    StatusTypes = "В работе"
+                    Title = "В работе"
                 },
                 new  Status()
                 {
-                    StatusTypes = "Завершена"
+                    Title = "Завершена"
                 },
             };
-            List<CustomTask> listOfTasks = new List<CustomTask>()
+            List<Note> listOfTasks = new List<Note>()
             {
-                new CustomTask()
+                new Note()
                 {
-                    TasksName = "Помыть машину",
+                    Title = "Помыть машину",
                     Description = "Открыть гараж, помыть машину, вытереть машину",
                     Status = listOfStatuses[0]
                 },
-                new  CustomTask()
+                new  Note()
                 {
-                    TasksName = "Выкинуть мусор",
+                    Title = "Выкинуть мусор",
                     Description = "Открыть гараж, выкинуть мусор",
                     Status = listOfStatuses[1]
                 },
-                new  CustomTask()
+                new  Note()
                 {
-                    TasksName = "Протереть пыль",
+                    Title = "Протереть пыль",
                     Description = "Взять тряпку, протереть пыль. Всё.",
                     Status = listOfStatuses[2]
                 },
-                new  CustomTask()
+                new  Note()
                 {
-                    TasksName = "Пропылесосить пыль",
+                    Title = "Пропылесосить пыль",
                     Description = "Взять тряпку, пропылесосить пыль.",
                     Status = listOfStatuses[1]
                 },
             };
-            
+
             context.AddRange(listOfStatuses);
             context.SaveChanges();
 
             context.AddRange(listOfTasks);
-            context.SaveChanges();  
+            context.SaveChanges();
         }
 
     }

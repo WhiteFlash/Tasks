@@ -10,13 +10,13 @@ namespace Tasks.Core.Model
     /// </summary>
 
     [DataContract]
-    public class Tasks : ITasks
+    public class Note : INote
     {
         [DataMember]
-        public int TasksID { get; set; }
+        public int Id { get; set; }
         
         [DataMember]
-        public string TasksName { get; set; }
+        public string Title { get; set; }
         
         [DataMember]
         public string Description { get; set; }
@@ -28,17 +28,18 @@ namespace Tasks.Core.Model
         public Status Status { get; set; }
 
 
-
-        public class Config : IEntityTypeConfiguration<Tasks>
+        public class Config : IEntityTypeConfiguration<Note>
         {
-            public void Configure(EntityTypeBuilder<Tasks> config)
+            public void Configure(EntityTypeBuilder<Note> config)
             {
-                config.ToTable("Tasks");
-                config.HasKey(key => key.TasksID);
-                config.Property(prop => prop.TasksName).HasColumnName("TasksName");
+                config.ToTable("Notes");
+                config.HasKey(key => key.Id);
+                config.Property(prop => prop.Title).HasColumnName("Title");
                 config.Property(prop => prop.Description).HasColumnName("Description");
-
+                
                 config.HasOne(x => x.Status).WithMany().HasForeignKey(x => x.StatusId);
+
+                config.Property(prop => prop.Title).IsRequired();
             }
         }
     }

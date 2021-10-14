@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AY5frSWbvB6MHw1yRSkprqegerhEZn8iHNLOarxtJ2REzAhhh5AVpuYz6mBptHTlhU2q0o/D9aSYwIm+/4HomQ==",
+  "dgSpecHash": "WsCT/Lo+l6rz9U2DoZJswgZbmFfHu77D2XSiICIb4ZyOQ8LmEZrlxdiradhjVfzq614+h9iA6g+oHr0jlH+58A==",
   "success": true,
-  "projectFilePath": "D:\\All-files\\Work\\Тестовые задания\\Softline\\Server\\Tasks\\Tasks.DAL\\Tasks.DAL.csproj",
+  "projectFilePath": "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.DAL\\Tasks.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ivank\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\ivank\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",

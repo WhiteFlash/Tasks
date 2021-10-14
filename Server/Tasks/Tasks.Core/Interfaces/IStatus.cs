@@ -6,6 +6,6 @@ namespace Tasks.Core.Interfaces
 {
     interface IStatus
     {
-        public string StatusTypes { get; set; }
+        public string Title { get; set; }
     }
 }

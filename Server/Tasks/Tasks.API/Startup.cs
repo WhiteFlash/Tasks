@@ -15,6 +15,8 @@ using Tasks.DAL.Data;
 using Newtonsoft.Json;
 using System.Diagnostics;
 using Tasks.DAL.Data.Interfaces;
+using Swashbuckle.AspNetCore.Swagger;
+using Microsoft.OpenApi.Models;
 
 namespace Tasks.API
 {
@@ -30,31 +32,34 @@ namespace Tasks.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllers();
             services.AddCors(options =>
             {
                 options.AddPolicy(Environments.Development, policy => policy
-                    .WithOrigins("https://localhost:3000", "http://localhost:3000", "https://localhost:44311")
+                    .WithOrigins("https://localhost:3000",
+                                 "http://localhost:3000",
+                                 "http://localhost:5000",
+                                 "http://localhost:5001",
+                                 "https://localhost:44311")
                     .AllowAnyMethod().AllowAnyHeader().AllowCredentials());
             });
-
-            services.AddControllers().AddNewtonsoftJson(options =>
-            {
-                options.SerializerSettings.NullValueHandling = NullValueHandling.Include;
-                options.SerializerSettings.DateFormatHandling = DateFormatHandling.IsoDateFormat;
-                options.SerializerSettings.DateParseHandling = DateParseHandling.DateTime;
-                options.SerializerSettings.DateTimeZoneHandling = DateTimeZoneHandling.Utc;
-            });
-
-            //services.AddScoped<IDataContext, DataContext>();
-            //services.AddScoped<Core.Services.ITasks, Core.Model.Tasks>();
-            //services.AddScoped<Core.Services.IStatus, Core.Model.Status>();
             
-            services.AddDbContext<DataContext>(option => option.UseSqlite(Configuration.GetConnectionString("TasksDB")));
+            services.AddTransient<DataContext>();
+
+            services.AddDbContext<DataContext>(option => option.UseSqlite(Configuration.GetConnectionString("TasksDb")));
+           
+            services.AddSwaggerGen(c => c.SwaggerDoc("v1", new OpenApiInfo { Title = "Tasks API", Description = "All APIs CRUD for project." }));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            if (env.IsDevelopment())
+            {
+                app.UseSwagger();
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API"));
+            }
+
             switch (env)
             {
                 case var value when Debugger.IsAttached:
@@ -72,20 +77,14 @@ namespace Tasks.API
                     break;
             }
 
-
             app.UseHttpsRedirection();
 
             app.UseRouting();
 
-            app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
+                endpoints.MapControllers(); 
             });
-            //app.UseMiddleware<DataContext>();
-            //app.UseMiddleware<Tasks>();
-            //app.UseMiddleware<Status>();
         }
     }
 }
