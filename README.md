@@ -1,4 +1,4 @@
-# Dayly tasks project
+# Daily tasks project
 
 The task is to develop little app which stores tasks for the day and its status.
 
