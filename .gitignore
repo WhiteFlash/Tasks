@@ -1,0 +1,7 @@
+Tasks.Core/bin
+Tasks.Core/obj
+Tasks.API/bin
+Tasks.API/obj
+Tasks.API/Storage
+Tasks.DAL/bin
+Tasks.DAL/obj
