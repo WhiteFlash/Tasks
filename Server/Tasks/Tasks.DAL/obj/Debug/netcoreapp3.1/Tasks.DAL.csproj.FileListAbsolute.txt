@@ -23,4 +23,3 @@ D:\All-files\Work\Тестовые задания\Softline\program\Server\Tasks\
 D:\All-files\Work\Тестовые задания\Softline\program\Server\Tasks\Tasks.DAL\obj\Debug\netcoreapp3.1\Tasks.DAL.csproj.CoreCompileInputs.cache
 D:\All-files\Work\Тестовые задания\Softline\program\Server\Tasks\Tasks.DAL\obj\Debug\netcoreapp3.1\Tasks.DAL.dll
 D:\All-files\Work\Тестовые задания\Softline\program\Server\Tasks\Tasks.DAL\obj\Debug\netcoreapp3.1\Tasks.DAL.pdb
-D:\All-files\Work\Тестовые задания\Softline\program\Server\Tasks\Tasks.DAL\obj\Debug\netcoreapp3.1\Tasks.DAL.csproj.CopyComplete
