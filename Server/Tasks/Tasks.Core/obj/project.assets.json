@@ -659,19 +659,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ivank\\.nuget\\packages\\": {}
+    "C:\\Users\\i.kotov\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.Core\\Tasks.Core.csproj",
+      "projectUniqueName": "C:\\Users\\i.kotov\\Source\\Repos\\WhiteFlash\\Tasks\\Server\\Tasks\\Tasks.Core\\Tasks.Core.csproj",
       "projectName": "Tasks.Core",
-      "projectPath": "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.Core\\Tasks.Core.csproj",
-      "packagesPath": "C:\\Users\\ivank\\.nuget\\packages\\",
-      "outputPath": "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.Core\\obj\\",
+      "projectPath": "C:\\Users\\i.kotov\\Source\\Repos\\WhiteFlash\\Tasks\\Server\\Tasks\\Tasks.Core\\Tasks.Core.csproj",
+      "packagesPath": "C:\\Users\\i.kotov\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\i.kotov\\Source\\Repos\\WhiteFlash\\Tasks\\Server\\Tasks\\Tasks.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ivank\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\i.kotov\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -716,12 +716,26 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[3.1.10, 3.1.10]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[3.1.0, 3.1.0]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[3.1.0, 3.1.0]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.7.21379.14\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.2.21505.57\\RuntimeIdentifierGraph.json"
       }
     }
   }
