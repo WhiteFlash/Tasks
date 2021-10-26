@@ -35,18 +35,6 @@ namespace Tasks.API.Controllers
         [HttpPut("{id}")]
         public async Task<ActionResult> PutTasks(int id, Note note)
         {
-            //JsonResult json = new JsonResult(tasks);
-            //if (id != tasks.TasksID)
-            //{
-            //    json.StatusCode = 400;
-            //    return json;
-            //}
-
-            //_context.Entry(tasks).State = EntityState.Modified;
-            //await _context.SaveChangesAsync();
-            //json.StatusCode = 200;
-
-            //return json;
             return Ok();
         }
 
@@ -57,7 +45,6 @@ namespace Tasks.API.Controllers
             //{
             //    _context.Tasks.Add(tasks);
             //    await _context.SaveChangesAsync();
-
             //    return CreatedAtAction("GetTasks", new { id = tasks.TasksID }, tasks);
             //}
             //catch (Exception ex) { throw new Exception(ex.Message); }
@@ -73,7 +60,6 @@ namespace Tasks.API.Controllers
             //{
             //    return NotFound();
             //}
-
             //_context.Tasks.Remove(tasks);
             //await _context.SaveChangesAsync();
 

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.API\\Tasks.API.csproj": {}
+    "C:\\Users\\i.kotov\\Source\\Repos\\WhiteFlash\\Tasks\\Server\\Tasks\\Tasks.API\\Tasks.API.csproj": {}
   },
   "projects": {
-    "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.API\\Tasks.API.csproj": {
+    "C:\\Users\\i.kotov\\Source\\Repos\\WhiteFlash\\Tasks\\Server\\Tasks\\Tasks.API\\Tasks.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.API\\Tasks.API.csproj",
+        "projectUniqueName": "C:\\Users\\i.kotov\\Source\\Repos\\WhiteFlash\\Tasks\\Server\\Tasks\\Tasks.API\\Tasks.API.csproj",
         "projectName": "Tasks.API",
-        "projectPath": "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.API\\Tasks.API.csproj",
-        "packagesPath": "C:\\Users\\ivank\\.nuget\\packages\\",
-        "outputPath": "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.API\\obj\\",
+        "projectPath": "C:\\Users\\i.kotov\\Source\\Repos\\WhiteFlash\\Tasks\\Server\\Tasks\\Tasks.API\\Tasks.API.csproj",
+        "packagesPath": "C:\\Users\\i.kotov\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\i.kotov\\Source\\Repos\\WhiteFlash\\Tasks\\Server\\Tasks\\Tasks.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ivank\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\i.kotov\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,11 +28,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.Core\\Tasks.Core.csproj": {
-                "projectPath": "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.Core\\Tasks.Core.csproj"
+              "C:\\Users\\i.kotov\\Source\\Repos\\WhiteFlash\\Tasks\\Server\\Tasks\\Tasks.Core\\Tasks.Core.csproj": {
+                "projectPath": "C:\\Users\\i.kotov\\Source\\Repos\\WhiteFlash\\Tasks\\Server\\Tasks\\Tasks.Core\\Tasks.Core.csproj"
               },
-              "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.DAL\\Tasks.DAL.csproj": {
-                "projectPath": "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.DAL\\Tasks.DAL.csproj"
+              "C:\\Users\\i.kotov\\Source\\Repos\\WhiteFlash\\Tasks\\Server\\Tasks\\Tasks.DAL\\Tasks.DAL.csproj": {
+                "projectPath": "C:\\Users\\i.kotov\\Source\\Repos\\WhiteFlash\\Tasks\\Server\\Tasks\\Tasks.DAL\\Tasks.DAL.csproj"
               }
             }
           }
@@ -88,12 +88,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[5.0.8, 5.0.8]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -102,21 +96,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.7.21379.14\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.2.21505.57\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.Core\\Tasks.Core.csproj": {
+    "C:\\Users\\i.kotov\\Source\\Repos\\WhiteFlash\\Tasks\\Server\\Tasks\\Tasks.Core\\Tasks.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.Core\\Tasks.Core.csproj",
+        "projectUniqueName": "C:\\Users\\i.kotov\\Source\\Repos\\WhiteFlash\\Tasks\\Server\\Tasks\\Tasks.Core\\Tasks.Core.csproj",
         "projectName": "Tasks.Core",
-        "projectPath": "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.Core\\Tasks.Core.csproj",
-        "packagesPath": "C:\\Users\\ivank\\.nuget\\packages\\",
-        "outputPath": "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.Core\\obj\\",
+        "projectPath": "C:\\Users\\i.kotov\\Source\\Repos\\WhiteFlash\\Tasks\\Server\\Tasks\\Tasks.Core\\Tasks.Core.csproj",
+        "packagesPath": "C:\\Users\\i.kotov\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\i.kotov\\Source\\Repos\\WhiteFlash\\Tasks\\Server\\Tasks\\Tasks.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ivank\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\i.kotov\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -161,41 +155,55 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.7.21379.14\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.2.21505.57\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.DAL\\Tasks.DAL.csproj": {
+    "C:\\Users\\i.kotov\\Source\\Repos\\WhiteFlash\\Tasks\\Server\\Tasks\\Tasks.DAL\\Tasks.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.DAL\\Tasks.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\i.kotov\\Source\\Repos\\WhiteFlash\\Tasks\\Server\\Tasks\\Tasks.DAL\\Tasks.DAL.csproj",
         "projectName": "Tasks.DAL",
-        "projectPath": "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.DAL\\Tasks.DAL.csproj",
-        "packagesPath": "C:\\Users\\ivank\\.nuget\\packages\\",
-        "outputPath": "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.DAL\\obj\\",
+        "projectPath": "C:\\Users\\i.kotov\\Source\\Repos\\WhiteFlash\\Tasks\\Server\\Tasks\\Tasks.DAL\\Tasks.DAL.csproj",
+        "packagesPath": "C:\\Users\\i.kotov\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\i.kotov\\Source\\Repos\\WhiteFlash\\Tasks\\Server\\Tasks\\Tasks.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\ivank\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\i.kotov\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net5.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
+          "net5.0": {
+            "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.Core\\Tasks.Core.csproj": {
-                "projectPath": "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.Core\\Tasks.Core.csproj"
+              "C:\\Users\\i.kotov\\Source\\Repos\\WhiteFlash\\Tasks\\Server\\Tasks\\Tasks.Core\\Tasks.Core.csproj": {
+                "projectPath": "C:\\Users\\i.kotov\\Source\\Repos\\WhiteFlash\\Tasks\\Server\\Tasks\\Tasks.Core\\Tasks.Core.csproj"
               }
             }
           }
@@ -207,8 +215,14 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.UnitOfWork": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -224,7 +238,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.7.21379.14\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.2.21505.57\\RuntimeIdentifierGraph.json"
         }
       }
     }

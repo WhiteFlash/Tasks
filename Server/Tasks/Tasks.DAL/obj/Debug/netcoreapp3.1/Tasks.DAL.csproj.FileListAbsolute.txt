@@ -23,3 +23,16 @@ D:\All-files\Work\Тестовые задания\Softline\program\Server\Tasks\
 D:\All-files\Work\Тестовые задания\Softline\program\Server\Tasks\Tasks.DAL\obj\Debug\netcoreapp3.1\Tasks.DAL.csproj.CoreCompileInputs.cache
 D:\All-files\Work\Тестовые задания\Softline\program\Server\Tasks\Tasks.DAL\obj\Debug\netcoreapp3.1\Tasks.DAL.dll
 D:\All-files\Work\Тестовые задания\Softline\program\Server\Tasks\Tasks.DAL\obj\Debug\netcoreapp3.1\Tasks.DAL.pdb
+C:\Users\i.kotov\source\repos\WhiteFlash\Tasks\Server\Tasks\Tasks.DAL\bin\Debug\netcoreapp3.1\Tasks.DAL.deps.json
+C:\Users\i.kotov\Source\Repos\WhiteFlash\Tasks\Server\Tasks\Tasks.DAL\bin\Debug\netcoreapp3.1\Tasks.DAL.dll
+C:\Users\i.kotov\Source\Repos\WhiteFlash\Tasks\Server\Tasks\Tasks.DAL\bin\Debug\netcoreapp3.1\Tasks.DAL.pdb
+C:\Users\i.kotov\Source\Repos\WhiteFlash\Tasks\Server\Tasks\Tasks.DAL\bin\Debug\netcoreapp3.1\Tasks.Core.dll
+C:\Users\i.kotov\Source\Repos\WhiteFlash\Tasks\Server\Tasks\Tasks.DAL\bin\Debug\netcoreapp3.1\Tasks.Core.pdb
+C:\Users\i.kotov\Source\Repos\WhiteFlash\Tasks\Server\Tasks\Tasks.DAL\obj\Debug\netcoreapp3.1\Tasks.DAL.csproj.AssemblyReference.cache
+C:\Users\i.kotov\Source\Repos\WhiteFlash\Tasks\Server\Tasks\Tasks.DAL\obj\Debug\netcoreapp3.1\Tasks.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\i.kotov\Source\Repos\WhiteFlash\Tasks\Server\Tasks\Tasks.DAL\obj\Debug\netcoreapp3.1\Tasks.DAL.AssemblyInfoInputs.cache
+C:\Users\i.kotov\Source\Repos\WhiteFlash\Tasks\Server\Tasks\Tasks.DAL\obj\Debug\netcoreapp3.1\Tasks.DAL.AssemblyInfo.cs
+C:\Users\i.kotov\Source\Repos\WhiteFlash\Tasks\Server\Tasks\Tasks.DAL\obj\Debug\netcoreapp3.1\Tasks.DAL.csproj.CoreCompileInputs.cache
+C:\Users\i.kotov\source\repos\WhiteFlash\Tasks\Server\Tasks\Tasks.DAL\obj\Debug\netcoreapp3.1\Tasks.DAL.csproj.CopyComplete
+C:\Users\i.kotov\Source\Repos\WhiteFlash\Tasks\Server\Tasks\Tasks.DAL\obj\Debug\netcoreapp3.1\Tasks.DAL.dll
+C:\Users\i.kotov\Source\Repos\WhiteFlash\Tasks\Server\Tasks\Tasks.DAL\obj\Debug\netcoreapp3.1\Tasks.DAL.pdb

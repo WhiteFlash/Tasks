@@ -404,6 +404,19 @@
           "lib/netstandard2.0/_._": {}
         }
       },
+      "Microsoft.EntityFrameworkCore.AutoHistory/3.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "3.1.0",
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.EntityFrameworkCore.AutoHistory.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.EntityFrameworkCore.AutoHistory.dll": {}
+        }
+      },
       "Microsoft.EntityFrameworkCore.Design/3.1.2": {
         "type": "package",
         "dependencies": {
@@ -483,6 +496,19 @@
         },
         "runtime": {
           "lib/netstandard2.0/_._": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.UnitOfWork/3.1.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.AutoHistory": "3.1.1",
+          "Microsoft.EntityFrameworkCore.Relational": "3.1.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.EntityFrameworkCore.UnitOfWork.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.EntityFrameworkCore.UnitOfWork.dll": {}
         }
       },
       "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
@@ -873,7 +899,7 @@
           "System.Xml.XDocument": "4.3.0"
         }
       },
-      "Newtonsoft.Json/11.0.2": {
+      "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
@@ -2769,8 +2795,9 @@
       },
       "Tasks.DAL/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
+        "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore.UnitOfWork": "3.1.0",
           "Tasks.Core": "1.0.0"
         },
         "compile": {
@@ -3271,6 +3298,19 @@
         "microsoft.entityframeworkcore.analyzers.nuspec"
       ]
     },
+    "Microsoft.EntityFrameworkCore.AutoHistory/3.1.1": {
+      "sha512": "AUyDffkoWa8urNm0z2TMX7VxYPal5LuHlirlWpzz7xKFMoSwmqpclz9ODXxmgrHLQ7/yT2Pv9Id0HO59dsKxWw==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.autohistory/3.1.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.EntityFrameworkCore.AutoHistory.dll",
+        "lib/netstandard2.0/Microsoft.EntityFrameworkCore.AutoHistory.xml",
+        "microsoft.entityframeworkcore.autohistory.3.1.1.nupkg.sha512",
+        "microsoft.entityframeworkcore.autohistory.nuspec"
+      ]
+    },
     "Microsoft.EntityFrameworkCore.Design/3.1.2": {
       "sha512": "DVbwHFZVWp37ti2uAqzSnfLqqvI1TjxLy8xOYm5jAyFLr/9OiGGyJHdtrMr3n62SG28eV3CeD+N4YwedyVhKSQ==",
       "type": "package",
@@ -3364,6 +3404,19 @@
         "tools/net461/win-x86/ef.exe",
         "tools/netcoreapp2.0/any/ef.dll",
         "tools/netcoreapp2.0/any/ef.runtimeconfig.json"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.UnitOfWork/3.1.0": {
+      "sha512": "JzHpeIljFflhg3TWuro6SlaRR8UJ026PB7RhSg6Z3aNJxxP8x+Mfm+lHpM2lrgw3+T6blPZwxik0lt9lIzW0EQ==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.unitofwork/3.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.EntityFrameworkCore.UnitOfWork.dll",
+        "lib/netstandard2.0/Microsoft.EntityFrameworkCore.UnitOfWork.xml",
+        "microsoft.entityframeworkcore.unitofwork.3.1.0.nupkg.sha512",
+        "microsoft.entityframeworkcore.unitofwork.nuspec"
       ]
     },
     "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
@@ -4181,10 +4234,10 @@
         "netstandard.library.nuspec"
       ]
     },
-    "Newtonsoft.Json/11.0.2": {
-      "sha512": "IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
+    "Newtonsoft.Json/12.0.3": {
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
       "type": "package",
-      "path": "newtonsoft.json/11.0.2",
+      "path": "newtonsoft.json/12.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4207,8 +4260,9 @@
         "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.11.0.2.nupkg.sha512",
-        "newtonsoft.json.nuspec"
+        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
       ]
     },
     "NuGet.Frameworks/4.7.0": {
@@ -8805,19 +8859,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ivank\\.nuget\\packages\\": {}
+    "C:\\Users\\i.kotov\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.API\\Tasks.API.csproj",
+      "projectUniqueName": "C:\\Users\\i.kotov\\Source\\Repos\\WhiteFlash\\Tasks\\Server\\Tasks\\Tasks.API\\Tasks.API.csproj",
       "projectName": "Tasks.API",
-      "projectPath": "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.API\\Tasks.API.csproj",
-      "packagesPath": "C:\\Users\\ivank\\.nuget\\packages\\",
-      "outputPath": "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.API\\obj\\",
+      "projectPath": "C:\\Users\\i.kotov\\Source\\Repos\\WhiteFlash\\Tasks\\Server\\Tasks\\Tasks.API\\Tasks.API.csproj",
+      "packagesPath": "C:\\Users\\i.kotov\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\i.kotov\\Source\\Repos\\WhiteFlash\\Tasks\\Server\\Tasks\\Tasks.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ivank\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\i.kotov\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8831,11 +8885,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.Core\\Tasks.Core.csproj": {
-              "projectPath": "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.Core\\Tasks.Core.csproj"
+            "C:\\Users\\i.kotov\\Source\\Repos\\WhiteFlash\\Tasks\\Server\\Tasks\\Tasks.Core\\Tasks.Core.csproj": {
+              "projectPath": "C:\\Users\\i.kotov\\Source\\Repos\\WhiteFlash\\Tasks\\Server\\Tasks\\Tasks.Core\\Tasks.Core.csproj"
             },
-            "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.DAL\\Tasks.DAL.csproj": {
-              "projectPath": "D:\\All-files\\Work\\Тестовые задания\\Softline\\program\\Server\\Tasks\\Tasks.DAL\\Tasks.DAL.csproj"
+            "C:\\Users\\i.kotov\\Source\\Repos\\WhiteFlash\\Tasks\\Server\\Tasks\\Tasks.DAL\\Tasks.DAL.csproj": {
+              "projectPath": "C:\\Users\\i.kotov\\Source\\Repos\\WhiteFlash\\Tasks\\Server\\Tasks\\Tasks.DAL\\Tasks.DAL.csproj"
             }
           }
         }
@@ -8891,12 +8945,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[5.0.8, 5.0.8]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -8905,7 +8953,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.7.21379.14\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.2.21505.57\\RuntimeIdentifierGraph.json"
       }
     }
   }
