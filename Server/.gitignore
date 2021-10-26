@@ -2,7 +2,7 @@ Tasks.Core/bin
 Tasks.Core/obj
 Tasks.API/bin
 Tasks.API/obj
-Tasks.API/Storage
+Tasks.API/Storage/Tasks.db
 Tasks.DAL/bin
 Tasks.DAL/obj
 .vs/

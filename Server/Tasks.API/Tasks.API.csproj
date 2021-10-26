@@ -5,18 +5,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Abstractions\AbstractClasses\**" />
     <Compile Remove="Data\**" />
     <Compile Remove="Migrations\**" />
     <Compile Remove="Model\**" />
     <Compile Remove="Services\**" />
+    <Content Remove="Abstractions\AbstractClasses\**" />
     <Content Remove="Data\**" />
     <Content Remove="Migrations\**" />
     <Content Remove="Model\**" />
     <Content Remove="Services\**" />
+    <EmbeddedResource Remove="Abstractions\AbstractClasses\**" />
     <EmbeddedResource Remove="Data\**" />
     <EmbeddedResource Remove="Migrations\**" />
     <EmbeddedResource Remove="Model\**" />
     <EmbeddedResource Remove="Services\**" />
+    <None Remove="Abstractions\AbstractClasses\**" />
     <None Remove="Data\**" />
     <None Remove="Migrations\**" />
     <None Remove="Model\**" />
@@ -24,7 +28,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Abstractions\AbstractClasses\" />
     <Folder Include="Storage\" />
   </ItemGroup>
 
