@@ -1,15 +1,12 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Tasks.DAL.Data;
-using Newtonsoft;
-using Tasks.DAL.Data.Interfaces;
-using Tasks.API.ControllerLogic;
 using Tasks.Core.Model;
+using Tasks.DAL.Data;
+using Tasks.DAL.Repository;
 
 namespace Tasks.API.Controllers
 {
@@ -17,53 +14,65 @@ namespace Tasks.API.Controllers
     [ApiController]
     public class NoteController : ControllerBase
     {
-        private readonly NoteRepo _noteRepo;
+        private DataContextUnitOfWork _dataContextUnitOfWork;
 
         public NoteController(DataContext dataContext)
         {
-            _noteRepo = new NoteRepo(dataContext);
+            _dataContextUnitOfWork = new DataContextUnitOfWork(dataContext);
+        }   
+        
+        [HttpGet]
+        public async Task<ActionResult<List<Note>>> GetTasksAsync()
+        {
+            return await Task.Factory.StartNew(() => _dataContextUnitOfWork.Notes.GetAll().ToList());
         }
 
-        [HttpGet]
-        public ActionResult<List<Note>> GetTasks()
+        [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<Note>> GetTaskAsync(int id)
         {
-            var notes = _noteRepo.GetAllItems();
-            return notes.ToList();
+            var result = await Task.Factory.StartNew(() => _dataContextUnitOfWork.Notes.Get(id));
+            if (result is null)
+                return BadRequest();
+            return Ok(result);
         }
 
         [Produces("application/json")]
-        [HttpPut("{id}")]
-        public async Task<ActionResult> PutTasks(int id, Note note)
+        [HttpPut]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult> PutTasksAsync(Note value)
         {
+            if (value is null)
+                return BadRequest();
+            await Task.Factory.StartNew(() => _dataContextUnitOfWork.Notes.Update(value));
+            _dataContextUnitOfWork.Save();
             return Ok();
         }
 
         [HttpPost]
-        public async Task<ActionResult<Note>> PostTasks([FromBody] Note value)
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<Note>> PostTasksAsync([FromBody] Note value)
         {
-            //try
-            //{
-            //    _context.Tasks.Add(tasks);
-            //    await _context.SaveChangesAsync();
-            //    return CreatedAtAction("GetTasks", new { id = tasks.TasksID }, tasks);
-            //}
-            //catch (Exception ex) { throw new Exception(ex.Message); }
+            if (value is null)
+                return BadRequest();
+            await Task.Factory.StartNew(() => _dataContextUnitOfWork.Notes.Create(value));
+            _dataContextUnitOfWork.Save();
             return Ok();
-
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult> DeleteTasks([FromBody] int id)
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult> DeleteTasksAsync(int id)
         {
-            //CustomTask tasks = await _context.Tasks.FirstOrDefaultAsync(element => element.TasksID == id);
-            //if (tasks == null)
-            //{
-            //    return NotFound();
-            //}
-            //_context.Tasks.Remove(tasks);
-            //await _context.SaveChangesAsync();
-
-            return Ok($"Элемент {id} удалён");
+            if (id <= 0)
+                return BadRequest();
+            await Task.Factory.StartNew(() => _dataContextUnitOfWork.Notes.Delete(id));
+            _dataContextUnitOfWork.Save();
+            return Ok();
         }
     }
 }
