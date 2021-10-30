@@ -9,7 +9,7 @@ using Tasks.DAL.Data.Interfaces;
 
 namespace Tasks.DAL.Repository
 {
-    class NoteRepository : IRepository<Note>
+    public class NoteRepository : IRepository<Note>
     {
         private DataContext _db;
 
@@ -21,13 +21,12 @@ namespace Tasks.DAL.Repository
 
         public void Create(Note item)
         {
-            _db.Notes.Add(item);   
+            _db.Notes.Add(item);
         }
-
         public void Delete(int id)
         {
             Note note = _db.Notes.Find(id);
-            if(note != null)
+            if (note != null)
                 _db.Notes.Remove(note);
 
         }
