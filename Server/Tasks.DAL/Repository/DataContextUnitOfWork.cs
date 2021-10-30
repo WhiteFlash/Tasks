@@ -8,7 +8,7 @@ using Tasks.DAL.Data.Interfaces;
 
 namespace Tasks.DAL.Repository
 {
-    class DataContextUnitOfWork : IUnitOfWork
+    public class DataContextUnitOfWork : IUnitOfWork
     {
         private DataContext _db;
         private NoteRepository _noteRepository;
@@ -17,6 +17,10 @@ namespace Tasks.DAL.Repository
         public DataContextUnitOfWork(DataContext context)
         {
             _db = context;
+            if (context.Database.EnsureCreated())
+            {
+                InitializeDB.Initialize(context);
+            }
         }
 
         public IRepository<Note> Notes
