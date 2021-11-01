@@ -6,3 +6,5 @@ Tasks.API/Storage/Tasks.db
 Tasks.DAL/bin
 Tasks.DAL/obj
 .vs/
+Tasks.Tests/bin
+Tasks.Tests/obj
