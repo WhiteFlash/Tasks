@@ -1,10 +1,9 @@
-import Tabs from './components/tabs';
+import EntryPointComponent from './components/root.jsx';
+import './App.css';
 
 function App() {
   return (
-    <div className="">
-      <Tabs />
-    </div>
+    <EntryPointComponent />
   );
 }
 

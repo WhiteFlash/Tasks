@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-class FormTab extends Component {
+class Form extends Component {
 
     componentDidMount = () => {
       
@@ -32,4 +32,4 @@ class FormTab extends Component {
     }
 }
  
-export default FormTab;
+export default Form;

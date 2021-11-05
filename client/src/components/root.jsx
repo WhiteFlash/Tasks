@@ -1,10 +1,18 @@
 import React, { Component } from 'react';
 
-import { URLGETLOCALHOST, URL_LOCALHOST_DELETE } from '../const/const.js'
+import Grid from '@mui/material/Grid';
+import Button from '@mui/material/Button';
+import Brightness6OutlinedIcon from '@mui/icons-material/Brightness6Outlined';
+import LanguageOutlinedIcon from '@mui/icons-material/LanguageOutlined';
 
 
 
-class Tabs extends Component {
+import TasksTable from './tasksTable.jsx';
+import { GET_NOTE, GET_NOTES_All } from '../const/ApiNoteConsts.js'
+import { Box } from '@mui/system';
+
+
+class Root extends Component {
     state = {     
         isFormShown: false,
         data: {
@@ -56,14 +64,7 @@ class Tabs extends Component {
     }
 
     handelDelete = (id) => {
-        console.log(id);
-        fetch(URL_LOCALHOST_DELETE, {
-            method: "DELETE",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(id)
-        });
+        
     }
     
     componentDidMount = () =>
@@ -80,16 +81,40 @@ class Tabs extends Component {
      
     }
 
-    render() {    
-        
-       
+    changeLang = () => {
+        alert();
+    }
 
+
+    changeTheme = () => {
+        alert();
+    }
+
+    render() {   
         return (  
-            <React.Fragment >
-                  
+                <React.Fragment>
+
+                       <Grid container spacing={3}>
+                            <Grid item>
+                                <Box sx={{marginTop: "6px"}}>
+                                    <Brightness6OutlinedIcon onClick={this.changeLang}/>
+                                </Box>
+                            </Grid>
+                            <Grid item>
+                                <Box sx={{marginTop: "5px"}}>
+                                    <LanguageOutlinedIcon onClick={this.changeTheme}></LanguageOutlinedIcon>
+                                </Box>
+                            </Grid>
+                            <Grid item>
+                                <Button variant="primary">Login</Button>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <TasksTable></TasksTable>
+                            </Grid>
+                        </Grid>
                 </React.Fragment> 
             );
         }
     }
     
-    export default Tabs;
+    export default Root;
