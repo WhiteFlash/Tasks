@@ -4,7 +4,7 @@ class TableTask extends Component {
     
    
 
-    componentDidUpdate = (prevProps, prevState, currentProp) =>{
+    componentDidUpdate = (prevProps, prevState, currentProp) => {
       
     }
     
@@ -13,8 +13,7 @@ class TableTask extends Component {
         return ( 
             <React.Fragment>
                 
-            </React.Fragment>
-      
+            </React.Fragment>      
         )
     }
 }

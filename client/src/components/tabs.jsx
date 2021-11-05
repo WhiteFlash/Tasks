@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Tab, Grid, Modal } from 'semantic-ui-react';
-import FadeIn from 'react-fade-in';
 
-import FormTab from './formTab';
-import TableTask  from './table';
 import { URLGETLOCALHOST, URL_LOCALHOST_DELETE } from '../const/const.js'
 
 
@@ -90,14 +86,7 @@ class Tabs extends Component {
 
         return (  
             <React.Fragment >
-                    <br/>  
-                    <Grid container>        
-                        <Grid.Row>               
-                            <Grid.Column>
-                                <TableTask />
-                            </Grid.Column>                   
-                        </Grid.Row>
-                      </Grid>
+                  
                 </React.Fragment> 
             );
         }
