@@ -72,92 +72,21 @@ class Tabs extends Component {
     
     componentDidMount = () =>
     {
-        fetch(URLGETLOCALHOST)
-            .then(t => t.json())
-            .then((result) => this.setState({ data: {tasks: result, isLoaded: true} }));
     }
     
    
 
     saveDataToDataBase = (task) => {
 
-        //TODO: Сделать динамическое обновление таблицы, после добавления элемента из формы в базу.
-       
-        // task.status.statusID = 1
-        // task.status.statusTypes = "Создана";
-        console.log("Метод saveDataToDataBase");
-        // console.log(task);
-        // console.log(this.state.data.tasks[0]);
-
-        let newArrayOfTasks = [...this.state.data.tasks, task];
-
-        
-        console.log(task);
-        
-        let updatedTask = {
-            tasksName: task.tasksName, 
-            description: task.description,
-            status: {
-                statusId: 1,
-                statusTypes: "Создана"
-            }
-            
-        }
-        console.log(updatedTask);
-        
-        const newArrayOfTasksTwo = Object.assign([], this.state.data.tasks, this.state.data.tasks.push(updatedTask));
-
-
-        this.setState(prevState => { 
-            const dataOne =  { ...prevState.data,
-                                    tasks : newArrayOfTasksTwo
-                        };                         
-        })
     }
 
     componentDidUpdate = (prevProps, prevState, currentProp) => {
-        // console.log("prevState = " + prevState);
-        // console.log(prevState);
-        // console.log("prevState = " + this.state);
-        // console.log(this.state);
-        // console.log("prevProps = " + prevProps);
-        // console.log(prevProps);
-        // console.log("this.props");
-        // console.log(this.props);
-
-        // // console.log(prevProps);
-        // console.log("componentDidUpdate method called. dataIsUpdated = " + this.props);
-
-
-        // if(prevState.dataIsUpdated === true) {
-        //     if( prevState.data.tasks[this.state.data.tasks.length - 1].tasksID !== prevState.data.tasks[this.state.data.tasks.length - 1].tasksID) {
-        //         {
-        //             fetch(URLGETLOCALHOST)
-        //             .then(t => t.json())
-        //             .then((result) => this.setState({ data: {tasks: result, isLoaded: true}, dataIsUpdated: false }));
-                    
-        //         }
-        //     }
-        // }            
+     
     }
 
     render() {    
         
-        const showForm = (task) => {            
-            if(this.state.isFormShown) {
-                return  <Grid.Column>
-                            <FadeIn>
-                                <FormTab editElement={this.state.updatedElement}
-                                         saveElement={this.saveDataToDataBase}
-                                         closeFrom={this.closeFrom}
-                                         onFormEdit={this.handleFormEdit} />
-                            </FadeIn>
-                        </Grid.Column>
-            }
-            else {
-                return 
-            }
-        }
+       
 
         return (  
             <React.Fragment >
@@ -165,25 +94,10 @@ class Tabs extends Component {
                     <Grid container>        
                         <Grid.Row>               
                             <Grid.Column>
-                                <TableTask 
-                                    onFormEdit={this.handleFormEdit} 
-                                    onFormAdd={this.handleFormAdd}
-                                    onFormDelete={this.handelDelete}
-                                    data ={this.state.data} />
+                                <TableTask />
                             </Grid.Column>                   
                         </Grid.Row>
-                        <Modal 
-                            Inverted
-                            onClose={this.closeFrom}
-                            onOpen={this.handleFormAdd}
-                            open={this.state.isFormShown}
-                            size='large'
-                            >
-                            <Grid.Row>               
-                                {showForm()}
-                            </Grid.Row> 
-                        </Modal>
-                    </Grid>
+                      </Grid>
                 </React.Fragment> 
             );
         }
