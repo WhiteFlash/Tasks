@@ -1,0 +1,13 @@
+{
+    "AppHeading" : "Задачи",
+    "Control" : {
+        "Edit" : "Редактировать",
+        "Save" : "Сохранить",
+        "Delete" : "Удалить"
+    },
+    "Task" : {
+        "StatusTask": "Статус",
+        "TitleTask": "Название",
+        "DescriptionTasks": "Описание"
+    }   
+}

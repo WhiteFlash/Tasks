@@ -1,0 +1,13 @@
+{
+    "AppHeading" : "Tasks",
+    "Control": {
+        "Edit" : "Edit",
+        "Save" : "Save",
+        "Delete" : "Delete"
+    },
+    "Task" : {
+        "Status": "Status",
+        "Title": "Title",
+        "Description": "Description"
+    }
+}
